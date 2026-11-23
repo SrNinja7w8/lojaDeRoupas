@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Essenza Moda</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topo">
+  <a href="#inicio" class="logo">essenza<small>MODA</small></a>
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#categorias">Categorias</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <button id="btn-carrinho" class="carrinho" aria-label="Abrir carrinho">🛍️<span id="contador">0</span></button>
+</header>
+
+<section id="inicio" class="hero">
+  <div>
+    <h1>Vista sua<br><strong>melhor versão.</strong></h1>
+    <p>Moda, estilo e conforto em um só lugar.</p>
+    <a href="#destaques" class="btn">Comprar agora →</a>
+  </div>
+</section>
+
+<main>
+  <section id="categorias">
+    <div class="titulo-linha"><h2>Categorias</h2><button class="link" data-cat="todos">Ver todas →</button></div>
+    <div class="categorias">
+      <button class="cat" data-cat="Blusas">👕<span>Blusas</span></button>
+      <button class="cat" data-cat="Calças">👖<span>Calças</span></button>
+      <button class="cat" data-cat="Vestidos">👗<span>Vestidos</span></button>
+      <button class="cat" data-cat="Moletons">🧥<span>Moletons</span></button>
+    </div>
+  </section>
+
+  <section id="destaques">
+    <h2 id="titulo-produtos">Destaques</h2>
+    <div id="produtos" class="produtos"></div>
+  </section>
+
+  <section id="sobre" class="bloco">
+    <h2>Sobre</h2>
+    <p>A Essenza Moda nasceu para vestir você com estilo e conforto, com peças básicas e atemporais.</p>
+  </section>
+</main>
+
+<footer id="contato" class="rodape">
+  <div class="logo">essenza<small>MODA</small></div>
+  <div class="links"><a href="#">Ajuda</a><a href="#">Trocas e Devoluções</a><a href="#">Política de Privacidade</a></div>
+  <div>Siga-nos<br>Instagram · TikTok · Pinterest</div>
+</footer>
+
+<aside id="painel" class="painel">
+  <div class="painel-topo"><h3>Seu carrinho</h3><button id="fechar">✕</button></div>
+  <ul id="itens"></ul>
+  <div class="total">Total: <strong id="total">R$ 0,00</strong></div>
+  <button class="btn cheio" id="finalizar">Finalizar compra</button>
+</aside>
+<div id="fundo" class="fundo"></div>
+<div id="aviso" class="aviso"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
