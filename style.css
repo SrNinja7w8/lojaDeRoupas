@@ -1,0 +1,136 @@
+/* Cores do site */
+:root {
+  --marrom: #4a2a1c;
+  --claro: #f7ebe3;
+  --bege: #e8d3c4;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--claro);
+  color: var(--marrom);
+}
+
+/* Menu */
+header {
+  background: var(--marrom);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 30px;
+}
+nav a { color: white; text-decoration: none; margin: 0 12px; }
+nav a:hover { text-decoration: underline; }
+
+/* Banner */
+.banner {
+  background: var(--bege);
+  text-align: center;
+  padding: 80px 20px;
+}
+.banner h2 { font-size: 36px; margin-bottom: 10px; }
+.banner p { margin-bottom: 20px; }
+
+.botao {
+  background: var(--marrom);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+/* Produtos */
+#produtos { padding: 40px 30px; text-align: center; }
+
+.filtros { margin: 20px 0; }
+.filtros button, .produto button {
+  background: var(--marrom);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 3px;
+}
+.filtros button:hover, .produto button:hover { opacity: 0.8; }
+
+.lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.produto {
+  background: var(--bege);
+  padding: 20px;
+  border-radius: 10px;
+}
+.foto { font-size: 70px; margin-bottom: 10px; }
+.produto p { margin: 8px 0; font-weight: bold; }
+
+/* Rodapé */
+footer {
+  background: var(--marrom);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Saldo e mensagem de compra */
+.conta span { margin-left: 16px; }
+#mensagem { min-height: 24px; font-weight: bold; margin-bottom: 15px; }
+
+/* ===== RESPONSIVIDADE ===== */
+
+/* Tablet (até 900px) */
+@media (max-width: 900px) {
+  header { flex-wrap: wrap; gap: 10px; }
+  .banner h2 { font-size: 30px; }
+}
+
+/* Celular (até 600px) */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;   /* menu em coluna */
+    text-align: center;
+  }
+  nav a { margin: 0 8px; }
+  .conta span { margin: 0 8px; }
+
+  .banner { padding: 50px 15px; }
+  .banner h2 { font-size: 24px; }
+
+  #produtos { padding: 30px 15px; }
+  .lista { grid-template-columns: 1fr 1fr; gap: 12px; }  /* 2 colunas */
+  .foto { font-size: 50px; }
+}
+
+/* Celular pequeno (até 400px) */
+@media (max-width: 400px) {
+  .lista { grid-template-columns: 1fr; }  /* 1 coluna */
+}
+
+/* Páginas de contato e suporte */
+.pagina { max-width: 600px; margin: 0 auto; padding: 40px 20px; min-height: 60vh; }
+.pagina h2 { margin-bottom: 10px; }
+.pagina form { display: flex; flex-direction: column; gap: 10px; margin: 20px 0; }
+.pagina input, .pagina textarea {
+  padding: 10px;
+  border: 1px solid var(--marrom);
+  border-radius: 8px;
+  font-family: inherit;
+}
+.pagina form button {
+  background: var(--marrom);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+#resposta { font-weight: bold; color: green; }
+details { background: var(--bege); padding: 12px 16px; border-radius: 8px; margin-top: 10px; }
+summary { cursor: pointer; font-weight: bold; }
+details p { margin-top: 8px; }
