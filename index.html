@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DEBMARGABEL</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- MENU -->
+  <header>
+    <h1 class="logo">DEBMARGABEL</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="#produtos">Produtos</a>
+      <a href="contato.html">Contato</a>
+      <a href="suporte.html">Suporte</a>
+    </nav>
+    <div class="conta">
+      <span>💰 Saldo: <strong id="saldo">R$ 500,00</strong></span>
+      <span>🛍️ Itens: <strong id="contador">0</strong></span>
+    </div>
+  </header>
+
+  <!-- BANNER -->
+  <section id="inicio" class="banner">
+    <h2>Vista sua melhor versão.</h2>
+    <p>Moda, estilo e conforto em um só lugar.</p>
+    <a href="#produtos" class="botao">Comprar agora</a>
+  </section>
+
+  <!-- PRODUTOS -->
+  <section id="produtos">
+    <h2>Produtos</h2>
+
+    <div class="filtros">
+      <button onclick="filtrar('todos')">Todos</button>
+      <button onclick="filtrar('blusas')">Blusas</button>
+      <button onclick="filtrar('calcas')">Calças</button>
+      <button onclick="filtrar('moletons')">Moletons</button>
+    </div>
+
+    <p id="mensagem"></p>
+
+    <div class="lista">
+      <div class="produto blusas">
+        <div class="foto">👚</div>
+        <h3>Blusa Básica</h3>
+        <p>R$ 49,90</p>
+        <button onclick="comprar(49.90, 'Blusa Básica')">Comprar</button>
+      </div>
+
+      <div class="produto blusas">
+        <div class="foto">👕</div>
+        <h3>Camiseta Oversized</h3>
+        <p>R$ 59,90</p>
+        <button onclick="comprar(59.90, 'Camiseta Oversized')">Comprar</button>
+      </div>
+
+      <div class="produto calcas">
+        <div class="foto">👖</div>
+        <h3>Calça Alfaiataria</h3>
+        <p>R$ 99,90</p>
+        <button onclick="comprar(99.90, 'Calça Alfaiataria')">Comprar</button>
+      </div>
+
+      <div class="produto moletons">
+        <div class="foto">🧥</div>
+        <h3>Moletom Básico</h3>
+        <p>R$ 129,90</p>
+        <button onclick="comprar(129.90, 'Moletom Básico')">Comprar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>DEBMARGABEL · contato@debmargabel.com</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
