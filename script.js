@@ -7,7 +7,7 @@ function formatar(valor) {
   return "R$ " + valor.toFixed(2).replace(".", ",");
 }
 
-// 1) COMPRA: confere se tem saldo, desconta e atualiza a tela
+//COMPRA: confere se tem saldo, desconta e atualiza a tela
 function comprar(preco, nome) {
   const mensagem = document.getElementById("mensagem");
 
@@ -24,7 +24,7 @@ function comprar(preco, nome) {
   }
 }
 
-// 2) FILTRO: mostra só os produtos da categoria escolhida
+//FILTRO: mostra só os produtos da categoria escolhida
 function filtrar(categoria) {
   const produtos = document.querySelectorAll(".produto");
 
@@ -37,7 +37,7 @@ function filtrar(categoria) {
   }
 }
 
-// 3) CONTATO: simula o envio do formulário (não envia nada de verdade)
+//CONTATO: simula o envio do formulário (não envia nada de verdade)
 function enviarContato(event) {
   event.preventDefault(); // impede a página de recarregar
   const nome = document.getElementById("nome").value;
