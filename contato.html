@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contato - DEBMARGABEL</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1 class="logo">DEBMARGABEL</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="index.html#produtos">Produtos</a>
+      <a href="contato.html">Contato</a>
+      <a href="suporte.html">Suporte</a>
+    </nav>
+  </header>
+
+  <section class="pagina">
+    <h2>Contato</h2>
+    <p>Fale com a gente pelo formulário abaixo.</p>
+
+    <form onsubmit="enviarContato(event)">
+      <input type="text" id="nome" placeholder="Seu nome" required>
+      <input type="email" id="email" placeholder="Seu e-mail" required>
+      <textarea id="texto" rows="5" placeholder="Sua mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+
+    <p id="resposta"></p>
+  </section>
+
+  <footer>
+    <p>DEBMARGABEL · contato@debmargabel.com</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
